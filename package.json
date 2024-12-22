@@ -1,0 +1,23 @@
+{
+  "name": "j_finance_client",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node j_server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahoc369782/J_FINANCE_CLIENT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahoc369782/J_FINANCE_CLIENT/issues"
+  },
+  "homepage": "https://github.com/rahoc369782/J_FINANCE_CLIENT#readme",
+  "description": ""
+}

@@ -1,0 +1,41 @@
+INTRO
+    J_FINANCE_CLIENT is an client programme which provide static panel 
+    for adding transactions and generate required schema for submitting to 
+    server for processing J_FINANCE core finance ledger.
+
+CORE MODULES
+    SERVER => SERVER will provide easy panel for viewing report , and interacting
+              with features and also submitting transactions.
+
+    TRANSACTION FILE => Generate by client programme in (public/data/transactions/transactions.dt)
+
+    NETWORK MODULE => Will download and submit data from and to storage
+
+FLOW OR CLIENT ARCITECTURE :  
+    - One base file will always be their in (public/data/transactions/transactions.dt)
+    - Client will request panel (HTML) for interacting with J_FINANCE
+    - TRANSACTIONS
+        - Client will collect transactions in fixed file.
+        - After threashhold or manual trigger it will do main process of submitting transactions
+            1) Will fetch INPUT AND OUTPUT FILES and parsed it.
+                - Will read INPUT file meta and update it as per latest transactions.
+                - 
+                - 
+            2) 
+
+
+
+J_FINANCE_TRANSACTIONS file arcitecture :
+    - First 20 bytes will be for headers sizes and data offset.
+    - HEADERS :
+        - TOTAL TRANSACTIONS 
+        - BATCH SIZE TOTAL
+        - START AND END DATE OF BATCH
+        - TIMESTAMP
+  
+21-25
+26-30
+FILE reading
+    -> Will only take transactions which is latest than last successfully processed transaction by server.
+    -> Buffer (will only contained not processed transactions.)
+    -> Will overide entire file and write new content.
